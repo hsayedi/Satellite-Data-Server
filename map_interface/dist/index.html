@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Satellite Data Interface</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+ <!--    <script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.7.0/moment.min.js"></script> -->
+<!-- 	<script src="pg-calendar/./dist/js/pignose.calendar.min.js"></script>
+	<link type="text/css" href="pg-calendar/./dist/css/pignose.calendar.min.css"/> -->
+
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <!-- <link rel="stylesheet" href="https:/resources/demos/style.css"> -->
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>$(function () {
+  $("#StartDate").datepicker();
+  $("#EndDate").datepicker();
+});</script>
+
+    <style>#map {
+        width: 100%;
+        height: 80vh;
+      }
+
+      #header{
+        text-align: center;
+        margin: auto;
+
+      }
+      /* #body {
+        background-color: #FFC300;
+      } */</style>
+<!-- .header {
+  padding: 40px;
+  background: #FFC300;
+  font-size: 50px;
+} -->
+
+
+  </head>
+
+<body>
+<div id="header">
+  <h2>Satellite Data Interface</h2>
+</div>
+
+<!--   <script>
+  var map = new OpenLayers.Map("mapdiv");
+  // add layers here
+  map.setCenter(new OpenLayers.LonLat(37.0902, 95.7129), 5);
+  </script> -->
+
+  <div id="map"></div>
+<label>top</label><input type="text" id="top">
+  <label>right</label><input type="text" id="right">
+  <label>bottom</label><input type="text" id="bottom">
+  <label>left</label><input type="text" id="left">
+  <div>
+  <p>StartDate: <input type="text" id="StartDate"></p>
+  <p>EndDate: <input type="text" id="EndDate"></p>
+
+  <!-- <div class="calendar"></div> -->
+
+  <script src="/map_interface.e31bb0bc.js"></script>
+
+</div></body>
+</html>
+
+

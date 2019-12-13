@@ -1,0 +1,25 @@
+{
+  "name": "newgeojson",
+  "version": "1.0.0",
+  "description": "this is to render maps using OL",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel index.html",
+    "build": "parcel build --public-url . index.html"
+  },
+  "keywords": [
+    "ol"
+  ],
+  "author": "husna",
+  "license": "ISC",
+  "dependencies": {
+    "fs": "0.0.1-security",
+    "ol": "^5.3.3",
+    "pg-calendar": "^1.4.31"
+  },
+  "devDependencies": {
+    "@types/node": "^12.12.8",
+    "parcel-bundler": "^1.12.4"
+  }
+}

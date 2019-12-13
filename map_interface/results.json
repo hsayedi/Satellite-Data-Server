@@ -1,0 +1,219 @@
+[ {
+  "polygon" : [ {
+    "datafile" : "states",
+    "query" : "individuals",
+    "field" : "NAME",
+    "value" : "Delaware",
+    "queryAnswer" : {
+      "sum" : 124791,
+      "count" : 11240,
+      "min" : 0,
+      "max" : 22,
+      "average" : 62.0
+    }
+  }, {
+    "datafile" : "states",
+    "query" : "individuals",
+    "field" : "NAME",
+    "value" : "Florida",
+    "queryAnswer" : {
+      "sum" : 2368137,
+      "count" : 236650,
+      "min" : 0,
+      "max" : 22,
+      "average" : 74.0
+    }
+  }, {
+    "datafile" : "states",
+    "query" : "individuals",
+    "field" : "NAME",
+    "value" : "Georgia",
+    "queryAnswer" : {
+      "sum" : 4196446,
+      "count" : 460519,
+      "min" : 0,
+      "max" : 22,
+      "average" : 66.0
+    }
+  }, {
+    "datafile" : "states",
+    "query" : "individuals",
+    "field" : "NAME",
+    "value" : "Maryland",
+    "queryAnswer" : {
+      "sum" : 4741780,
+      "count" : 526753,
+      "min" : 0,
+      "max" : 22,
+      "average" : 70.0
+    }
+  }, {
+    "datafile" : "states",
+    "query" : "individuals",
+    "field" : "NAME",
+    "value" : "North Carolina",
+    "queryAnswer" : {
+      "sum" : 7026906,
+      "count" : 766683,
+      "min" : 0,
+      "max" : 22,
+      "average" : 67.0
+    }
+  }, {
+    "datafile" : "states",
+    "query" : "individuals",
+    "field" : "NAME",
+    "value" : "South Carolina",
+    "queryAnswer" : {
+      "sum" : 8461439,
+      "count" : 926039,
+      "min" : 0,
+      "max" : 22,
+      "average" : 79.0
+    }
+  }, {
+    "datafile" : "states",
+    "query" : "individuals",
+    "field" : "NAME",
+    "value" : "Virginia",
+    "queryAnswer" : {
+      "sum" : 9497821,
+      "count" : 1068916,
+      "min" : 0,
+      "max" : 22,
+      "average" : 88.0
+    }
+  }, {
+    "datafile" : "states",
+    "query" : "individuals",
+    "field" : "NAME",
+    "value" : "District of Columbia",
+    "queryAnswer" : {
+      "sum" : 9502749,
+      "count" : 1069147,
+      "min" : 0,
+      "max" : 22,
+      "average" : 78.2
+    }
+  }, {
+    "datafile" : "states",
+    "query" : "individuals",
+    "field" : "NAME",
+    "value" : "West Virginia",
+    "queryAnswer" : {
+      "sum" : 9749815,
+      "count" : 1161330,
+      "min" : 0,
+      "max" : 22,
+      "average" : 66.9
+    }
+  }, {
+    "datafile" : "states",
+    "query" : "individuals",
+    "field" : "NAME",
+    "value" : "Alabama",
+    "queryAnswer" : {
+      "sum" : 10899987,
+      "count" : 1332627,
+      "min" : 0,
+      "max" : 22,
+      "average" : 65.0
+    }
+  }, {
+    "datafile" : "states",
+    "query" : "individuals",
+    "field" : "NAME",
+    "value" : "Kentucky",
+    "queryAnswer" : {
+      "sum" : 12242181,
+      "count" : 1489738,
+      "min" : 0,
+      "max" : 22,
+      "average" : 78.3
+    }
+  }, {
+    "datafile" : "states",
+    "query" : "individuals",
+    "field" : "NAME",
+    "value" : "Mississippi",
+    "queryAnswer" : {
+      "sum" : 13521476,
+      "count" : 1658938,
+      "min" : 0,
+      "max" : 22,
+      "average" : 78.1
+    }
+  }, {
+    "datafile" : "states",
+    "query" : "individuals",
+    "field" : "NAME",
+    "value" : "Tennessee",
+    "queryAnswer" : {
+      "sum" : 15496297,
+      "count" : 1874723,
+      "min" : 0,
+      "max" : 22,
+      "average" : 89.0
+    }
+  }, {
+    "datafile" : "states",
+    "query" : "individuals",
+    "field" : "NAME",
+    "value" : "Arkansas",
+    "queryAnswer" : {
+      "sum" : 17490139,
+      "count" : 2140361,
+      "min" : 0,
+      "max" : 22,
+      "average" : 88.2
+    }
+  }, {
+    "datafile" : "states",
+    "query" : "individuals",
+    "field" : "NAME",
+    "value" : "Louisiana",
+    "queryAnswer" : {
+      "sum" : 19244653,
+      "count" : 2334110,
+      "min" : 0,
+      "max" : 22,
+      "average" : 73.0
+    }
+  }, {
+    "datafile" : "states",
+    "query" : "individuals",
+    "field" : "NAME",
+    "value" : "Oklahoma",
+    "queryAnswer" : {
+      "sum" : 22288349,
+      "count" : 2591329,
+      "min" : 0,
+      "max" : 22,
+      "average" : 65.0
+    }
+  }, {
+    "datafile" : "states",
+    "query" : "individuals",
+    "field" : "NAME",
+    "value" : "Texas",
+    "queryAnswer" : {
+      "sum" : 32225122,
+      "count" : 3448458,
+      "min" : 0,
+      "max" : 22,
+      "average" : 90.0
+    }
+  } ],
+  "queryAnswer" : {
+    "sum" : 199078088,
+    "count" : 23097561,
+    "min" : 0,
+    "max" : 22,
+    "average" : 74.4
+  },
+  "runtimeStats" : {
+    "runtime" : 0.543578784,
+    "segments" : 603543,
+    "pixels" : 37125211
+  }
+} ]
