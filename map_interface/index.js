@@ -252,7 +252,7 @@ $(document).ready(function () {
         if (selectedValue === 'county') {
 
             url = addParam(url, 'datafile', 'counties');
-            url = addParam(url, 'basePath', '/Users/husnasayedi/Documents/UCR/MastersProject/Satellite-Data-Server/data/WGS84_boundaries/');
+            url = addParam(url, 'basePath', '../data/WGS84_boundaries/'); 
             url = addParam(url, 'vectorFile', '/Users/husnasayedi/Documents/UCR/MastersProject/Satellite-Data-Server/data/WGS84_boundaries/us_counties.shp');
             url = addParam(url, 'rasterFile', 'glc2000.tif');
 
