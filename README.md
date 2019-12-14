@@ -15,11 +15,6 @@ This system will allow users to query multiple polygons simultaneously based on 
 These include different zoom-level granularities, e.g. state, county, and zip code level polygons. The backend server 
 will compute a range of statistics: sum and count (of pixels), and min, max, average (of temperature in Kelvins). 
 
-## Required Packages
-
-Java 1.8
-Node JS
-
 
 
 ## Run the Application
