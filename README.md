@@ -15,14 +15,12 @@ This system will allow users to query multiple polygons simultaneously based on 
 These include different zoom-level granularities, e.g. state, county, and zip code level polygons. The backend server 
 will compute a range of statistics: sum and count (of pixels), and min, max, average (of temperature in Kelvins). 
 
-## Required Packages
-
-Java 1.8
-Node JS
-
 
 
 ## Run the Application
+
+Note: You may have to change some hard-coded references in map_interface/index.js in lines 256 and 263 to point to the 
+vector and raster files in data/ directory. 
 
 1) Run the backend server. Navigate to src/main/java/SatelliteDataServer.java and run. 
 
@@ -35,10 +33,12 @@ Example:
 Select January 1, 2018 as StartDate
 Select today's date as EndDate
 
-4) Zoom in (one zoom at a time) and you should see some state colors change. 
+4) Zoom into the United States (one zoom at a time) and you should see some state colors change. 
 
-Purple inidicates an undefinied region, which is due to the small range of sample data we are using. You will notice a 
-gradience of green to orange states. These shades indicate the aggregate temperatures for each given polygon. 
+The screenshot below shows an example zoom level 
+
+Note: Purple polygons inidicates an undefinied region, which is due to the small range of sample data we are using. You will 
+notice a gradience of green to orange states. These shades indicate the aggregate temperatures for each given polygon. 
 
 5) Zoom in a few more times until you start to see county polygons. Again, these counties will be color-coded according
 to their average temperatures. 
