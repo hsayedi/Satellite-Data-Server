@@ -19,6 +19,9 @@ will compute a range of statistics: sum and count (of pixels), and min, max, ave
 
 ## Run the Application
 
+Note: You may have to change some hard-coded references in map_interface/index.js in lines 256 and 263 to point to the 
+vector and raster files in data/ directory. 
+
 1) Run the backend server. Navigate to src/main/java/SatelliteDataServer.java and run. 
 
 2) Start the node server. Navigate to map_interface/ directory. In terminal, run ```npm start``` to start the server.
