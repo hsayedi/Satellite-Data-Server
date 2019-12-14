@@ -36,7 +36,7 @@ Select today's date as EndDate
 4) Zoom into the United States (one zoom at a time) and you should see some state colors change. 
 
 The screenshot below shows an example zoom level 
-![alt text](https://github.com/hsayedi/Satellite-Data-Server/Screen Shot 2019-12-13 at 8.40.58 AM.png)
+![alt text](https://github.com/hsayedi/Satellite-Data-Server/counties_zoom.png)
 
 Note: Purple polygons inidicates an undefinied region, which is due to the small range of sample data we are using. You will 
 notice a gradience of green to orange states. These shades indicate the aggregate temperatures for each given polygon. 
