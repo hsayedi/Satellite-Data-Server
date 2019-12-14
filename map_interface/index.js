@@ -185,7 +185,6 @@ $(document).ready(function () {
             features: (new GeoJSON()).readFeatures(geojsonObjectCounty)
         });
 
-        // What does this do?????
         var styleFunction = selection == 'state' ? styleFunctionStates : styleFunctionCounty;
         var vectorSource = selection == 'state' ? vectorSourceState : vectorSourceStateCounty;
         var vectorLayer = new VectorLayer({
