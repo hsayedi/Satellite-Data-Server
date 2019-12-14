@@ -39,8 +39,6 @@ The screenshot below shows an example zoom level
 
 ![U.S. Counties](counties_zoom.png)
 
-![U.S. Counties](https://github.com/hsayedi/Satellite-Data-Server/blob/counties_zoom.png "Optional title")
-
 Note: Purple polygons inidicates an undefinied region, which is due to the small range of sample data we are using. You will 
 notice a gradience of green to orange states. These shades indicate the aggregate temperatures for each given polygon. 
 
