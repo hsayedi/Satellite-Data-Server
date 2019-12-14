@@ -30,10 +30,12 @@ Example:
 Select January 1, 2018 as StartDate
 Select today's date as EndDate
 
-4) Zoom in (one zoom at a time) and you should see some state colors change. 
+4) Zoom into the United States (one zoom at a time) and you should see some state colors change. 
 
-Purple inidicates an undefinied region, which is due to the small range of sample data we are using. You will notice a 
-gradience of green to orange states. These shades indicate the aggregate temperatures for each given polygon. 
+The screenshot below shows an example zoom level 
+
+Note: Purple polygons inidicates an undefinied region, which is due to the small range of sample data we are using. You will 
+notice a gradience of green to orange states. These shades indicate the aggregate temperatures for each given polygon. 
 
 5) Zoom in a few more times until you start to see county polygons. Again, these counties will be color-coded according
 to their average temperatures. 
