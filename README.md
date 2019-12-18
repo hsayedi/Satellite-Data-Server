@@ -1,11 +1,12 @@
-# Satellite-Date-Server: Ad-Hoc Querying of Satellite Data to Process Multiple Polygons
+# Satellite-Date-Server 
+### Ad-Hoc Querying of Satellite Data to Process Multiple Polygons
 
 
 ## Background 
 
 The Satellite-Data-Server hosts satellite data to provide two main functions: 
-(1) Processing the data in aggregate using the Scanline method and 
-(2) Hosting the data to make available for users through a map interface. 
+1. Processing the data in aggregate using the Scanline method and 
+2. Hosting the data to make available for users through a map interface. 
 
 We execute the zonal statistics operation using the Scanline method. This method processes queries in aggregation, which 
 combines vector and raster data in their raw formats. We use these techniques to process multiple polygons at once, specified 
@@ -15,25 +16,36 @@ This system will allow users to query multiple polygons simultaneously based on 
 These include different zoom-level granularities, e.g. state, county, and zip code level polygons. The backend server 
 will compute a range of statistics: sum and count (of pixels), and min, max, average (of temperature in Kelvins). 
 
+## Installations
 
+1. ```npm install```
+2. Java 1.8
 
 ## Run the Application
 
 Note: You may have to change some hard-coded references in map_interface/index.js in lines 256 and 263 to point to the 
 vector and raster files in data/ directory. 
 
-1) Run the backend server. Navigate to src/main/java/SatelliteDataServer.java and run. 
+1. Clone this repository into your local machine using ```git clone https://github.com/hsayedi/Satellite-Data-Server.git```
 
-2) Start the node server. Navigate to map_interface/ directory. In terminal, run ```npm start``` to start the server.
-You will see the server running at a given URL, shown in the image below. Copy and paste the URL into a browser. 
+2. Run the backend server
+  * Navigate to src/main/java/SatelliteDataServer.java and run
+  
+3. Start the node server. 
+  * Navigate to map_interface/ directory
+  * In terminal, run ```npm start``` 
+  * You will see the server running at a given URL, i.e. ```http://localhost:1234```
+  * Copy and paste the given URL into a browser
+  
+4. In the web browser, select StartDate and EndDate
+  Because the sample of raster data is from January 1, 2018 to January 6, 2018 - select a dates in that range. 
+  * Example: 
+      StartDate: Select January 1, 2018
+      EndDate: Select today's date
 
-3) In the web browser, add select StartDate and EndDate. Because the sample of raster data is from January 1, 2018 
-to January 6, 2018, make sure to select a dates in that range. 
-Example: 
-Select January 1, 2018 as StartDate
-Select today's date as EndDate
-
-4) Zoom into the United States (one zoom at a time) and you should see some state colors change. 
+5. Zoom into the United States (one zoom at a time) and you should see some state colors change. 
+  * You will see U.S. states 
+  * When zoomed in further, the polygons should change from states to counties
 
 The screenshot below shows an example zoom level 
 
@@ -41,9 +53,6 @@ The screenshot below shows an example zoom level
 
 Note: Purple polygons inidicates an undefinied region, which is due to the small range of sample data we are using. You will 
 notice a gradience of green to orange states. These shades indicate the aggregate temperatures for each given polygon. 
-
-5) Zoom in a few more times until you start to see county polygons. Again, these counties will be color-coded according
-to their average temperatures. 
 
 
 
