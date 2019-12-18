@@ -10,22 +10,22 @@ import { Tile as TileLayer, Vector as VectorLayer } from 'ol/layer.js';
 import { OSM, Vector as VectorSource } from 'ol/source.js';
 import { Circle as CircleStyle, Fill, Stroke, Style } from 'ol/style.js';
 
-// read in states and counties files
+// Read in states and counties files
 var contents = fs.readFileSync('states_all.geojson', 'utf8');
 var contentsCounty = fs.readFileSync('counties_all.geojson', 'utf8');
 
-// Need to replace this file with results calculated from the backend 
+// This file gets updated with results of back-end
 var results = fs.readFileSync('results.json', 'utf8');
 var resObj = {};
 //console.log(results);
 
-// temperature to color map
+// Temperature to color map
 var map = {};
 
 
 $(document).ready(function () {
     var selection = 'state';
-    // this function will change the color of each polygon depending on the average temp
+    // Change the color of each polygon depending on the average temperature
     var initializeMap = function () {
         map[200] = { stroke: 'rgba(44, 190, 195, 4)', fill: 'rgba(44, 190, 195, 0.2)' };
         map[210] = { stroke: 'rgba(44, 135, 195, 4)', fill: 'rgba(44, 135, 195, 0.2)' };
@@ -39,23 +39,22 @@ $(document).ready(function () {
         map[290] = { stroke: 'rgba(239, 124, 98, 4)', fill: 'rgba(239, 124, 98, 0.2)' };
         map[300] = { stroke: 'rgba(239, 98, 98, 4s)', fill: 'rgba(239, 98, 98, 0.2)' };
     }
-    //console.log('Which file?' + contentsCounty);
+
     var geojsonObjectState = JSON.parse(contents);
     var geojsonObjectCounty = JSON.parse(contentsCounty);
 
-    // gets the color for each temp
+    // Gets the color for each temp
     var getColorForTemp = function (num) {
         var temp = num - (num % 10);
         var returnval = map[temp];
         return returnval;
     }
 
-    // return the average temp of each polygon
+    // Return the average temp of each polygon
     var returnAverageTemperature = function (Name) {
-        if (resObj && resObj.length > 0) {                                                  // if data in results is not empty,
+        if (resObj && resObj.length > 0) {                                                  
             for (var i = 0; i < resObj.length; i++) {  
                 var NameFromResults = resObj[i].NAME.split(' ').join('_');    
-                //console.log(Name+':'+NameFromResults);  
                 if (NameFromResults === Name){
                     return resObj[i].average;
                 }                
@@ -72,7 +71,7 @@ $(document).ready(function () {
         return value - (worlds * 360);
     }
 
-    // getting lat and long from openstreetmap
+    // Getting lat and long from openstreetmap
     var reverseGeocode = function (coords) {
         fetch('http://nominatim.openstreetmap.org/reverse?format=json&lon=' + coords[0] + '&lat=' + coords[1])
             .then(function (response) {
@@ -83,7 +82,7 @@ $(document).ready(function () {
     }
 
     let previousZoomLevel = 1;
-    // fetches box from map - bottomLeft, topRight, topLeft, bottomRight coordinates
+    // Fetches box from map - bottomLeft, topRight, topLeft, bottomRight coordinates
     var onMoveEnd = function (evt) {
         var map = evt.map;
         var zoomLevel = map.getView().getZoom();
@@ -108,7 +107,7 @@ $(document).ready(function () {
         reverseGeocode(coord);
 
 
-        // this will change to states or countiess file calculations based on zoom level
+        // This will change to states or countiess file calculations based on zoom level
         if (Math.floor(zoomLevel) != previousZoomLevel) {
             let mapCenter = map.getView().getCenter();
             // setting zoom level <6 as states and >6 as counties
@@ -127,14 +126,14 @@ $(document).ready(function () {
     var initializeMapCanvas = function (mapCenter, zoomLevel) {
         $("#map").empty();
 
-        // function for states - fill in temp, color of polygon
+        // Function for states - fill in temp, color of polygon
         var styleFunctionStates = function (feature) {
             initializeMap();
             var index = feature.getProperties()['wikipedia'].lastIndexOf('/');
             var stateName = feature.getProperties()['wikipedia'].substring(index + 1);
             var average = returnAverageTemperature(stateName);
             var color = getColorForTemp(average);
-            //console.log(JSON.stringify(color) + ' color from data ' + ' ' + index + ' ' + stateName + ' ' + average);
+            // setting undefined polygons to purple
             if (color == undefined) {
                 color = {};
                 color.fill = 'rgba(121, 98, 239, 0.2)'
@@ -152,13 +151,13 @@ $(document).ready(function () {
             });
         };
 
-        // function for counties - fill in temp, color of polygon
+        // Function for counties - fill in temp, color of polygon
         var styleFunctionCounty = function (feature) {
             initializeMap();
             var countyName = feature.getProperties()['NAME'];
             var average = returnAverageTemperature(countyName);
             var color = getColorForTemp(average);
-            //console.log(JSON.stringify(color) + ' color from data ' + ' ' + countyName + ' ' + average);
+            // setting undefined polygons to purple
             if (color == undefined) {
                 color = {};
                 color.fill = 'rgba(121, 98, 239, 0.2)'
@@ -176,11 +175,11 @@ $(document).ready(function () {
             });
         };
 
-        // read states GeoJSON file
+        // Read states GeoJSON file
         var vectorSourceState = new VectorSource({
             features: (new GeoJSON()).readFeatures(geojsonObjectState)
         });
-        // read counties GeoJson file
+        // Read counties GeoJson file
         var vectorSourceStateCounty = new VectorSource({
             features: (new GeoJSON()).readFeatures(geojsonObjectCounty)
         });
@@ -201,7 +200,7 @@ $(document).ready(function () {
             ],
             target: 'map',
             view: new View({
-                center: mapCenter ? mapCenter : [-10997148, 4569099], //[39.681298, -98.544965],
+                center: mapCenter ? mapCenter : [-10997148, 4569099], 
                 zoom: zoomLevel ? zoomLevel : 6
             })
         });
@@ -216,7 +215,8 @@ $(document).ready(function () {
     }
 
     var handleSelectOptions = function (selectedValue, zoomLevel, mapCenter, minX, minY, maxX, maxY) {
-        let url = 'http://localhost:12229/data/?';
+        // URL is explicitly set in back-end
+        let url = 'http://localhost:12229/data/?'; 
         url = addParam(url, 'minX', minX);
         url = addParam(url, 'minY', minY); 
         url = addParam(url, 'maxX', maxX);
@@ -240,8 +240,6 @@ $(document).ready(function () {
             enDate = new Date(endDate);
         }
         
-        
-
         let stDtStr = stDate.getFullYear()+"."+stDate.getMonth()+"."+stDate.getDate();
         let enDtStr = enDate.getFullYear()+"."+enDate.getMonth()+"."+enDate.getDate();
 
@@ -252,14 +250,12 @@ $(document).ready(function () {
 
             url = addParam(url, 'vectorFile', 'data/WGS84_boundaries/us_counties.shp');
             url = addParam(url, 'rasterDir', 'data/raster/')
-            //url = addParam(url, 'vectorFile', 'us_counties.shp');
             selection = 'county';
 
         } else if (selectedValue === 'state') {
 
             url = addParam(url, 'vectorFile', 'data/WGS84_boundaries/us_states.shp');
             url = addParam(url, 'rasterDir', 'data/raster/')
-            //url = addParam(url, 'vectorFile', 'us_states.shp');
             selection = 'state';
         }
                
@@ -296,7 +292,6 @@ $(document).ready(function () {
     });
 
     let mapCenter = map.getView().getCenter();
-    //var mapCen = [-10997148, 4569099] //[39.681298, -98.544965];
     handleSelectOptions('state', 6, mapCenter);
 
 });
