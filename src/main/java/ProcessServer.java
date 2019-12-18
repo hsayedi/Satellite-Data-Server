@@ -78,36 +78,17 @@ public class ProcessServer extends HttpServlet {
         String maxX = req.getParameter("maxX");
         String maxY = req.getParameter("maxY");
         String vectorFile = req.getParameter("vectorFile");
-
+        String rasterDir = req.getParameter("rasterDir");
         String startDate = req.getParameter("startDate");
         String endDate = req.getParameter("endDate");
 
         ProcessSatelliteData stats = new ProcessSatelliteData();
 
         String result = "";
-        //query = "allpolys";
         try {
-
-            ///Users/husnasayedi/Documents/UCR/MastersProject/Projecthadoop-horus-original/data/c/us_states.shp
-
-            String vectorFileName = vectorFile;
-            String rasterDirectory = "/Users/husnasayedi/Documents/UCR/MastersProject/Satellite-Data-Server/data/raster/";
-
-//            if(query == null){
-//                query = "allpolys";
-//            }
-//
-//            else {
-//                throw new RuntimeException("Unknown query '" + query + "'");
-//            }
-
-//            ArrayNode response =  ProcessZonalStatistics.filterCoordinatesDates(rasterDirectory, vectorFileName,
-//                    minX, maxX, minY, maxY, sc, startDate, endDate);
-
-
-            //    public static ArrayNode filterCoordinatesDates(String rasterDirectory, String vectorFileName,
-            //                                                   String minX, String maxX, String minY, String maxY, JavaSparkContext sc,
-            //                                                   String startDate, String endDate) throws IOException {
+            
+            String vectorFileName =  vectorFile;
+            String rasterDirectory = rasterDir;
 
             result = stats.data(
                     query,
@@ -121,8 +102,6 @@ public class ProcessServer extends HttpServlet {
                     startDate,
                     endDate
             );
-
-
 
         } catch (TransformException e) {
             e.printStackTrace();

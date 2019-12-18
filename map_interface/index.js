@@ -250,18 +250,16 @@ $(document).ready(function () {
         url = addParam(url, 'query', 'allpolys');
         if (selectedValue === 'county') {
 
-            url = addParam(url, 'datafile', 'counties');
-            url = addParam(url, 'basePath', '../data/WGS84_boundaries/'); 
-            url = addParam(url, 'vectorFile', '/Users/husnasayedi/Documents/UCR/MastersProject/Satellite-Data-Server/data/WGS84_boundaries/us_counties.shp');
-            url = addParam(url, 'rasterFile', 'glc2000.tif');
-
+            url = addParam(url, 'vectorFile', 'data/WGS84_boundaries/us_counties.shp');
+            url = addParam(url, 'rasterDir', 'data/raster/')
+            //url = addParam(url, 'vectorFile', 'us_counties.shp');
             selection = 'county';
 
         } else if (selectedValue === 'state') {
 
-            url = addParam(url, 'vectorFile', '/Users/husnasayedi/Documents/UCR/MastersProject/Satellite-Data-Server/data/WGS84_boundaries/us_states.shp');
-            url = addParam(url, 'rasterFile', 'glc2000.tif');
-
+            url = addParam(url, 'vectorFile', 'data/WGS84_boundaries/us_states.shp');
+            url = addParam(url, 'rasterDir', 'data/raster/')
+            //url = addParam(url, 'vectorFile', 'us_states.shp');
             selection = 'state';
         }
                
