@@ -26,26 +26,32 @@ will compute a range of statistics: sum and count (of pixels), and min, max, ave
 Note: You may have to change some hard-coded references in map_interface/index.js in lines 256 and 263 to point to the 
 vector and raster files in data/ directory. 
 
-1. Clone this repository into your local machine using ```git clone https://github.com/hsayedi/Satellite-Data-Server.git```
+1. Clone this repository into your local machine 
+
+ * ```git clone https://github.com/hsayedi/Satellite-Data-Server.git```
 
 2. Run the backend server
+
   * Navigate to src/main/java/SatelliteDataServer.java and run
   
 3. Start the node server. 
+
   * Navigate to map_interface/ directory
   * In terminal, run ```npm start``` 
   * You will see the server running at a given URL, i.e. ```http://localhost:1234```
   * Copy and paste the given URL into a browser
   
 4. In the web browser, select StartDate and EndDate
+
   * Because the sample of raster data is from January 1, 2018 to January 6, 2018 - select a dates in that range. 
   * Example: 
       * StartDate: Select January 1, 2018
       * EndDate: Select today's date
 
 5. Zoom into the United States (one zoom at a time) and you should see some state colors change. 
-   * You will see U.S. states 
-   * When zoomed in further, the polygons should change from states to counties
+
+  * You will see U.S. states 
+  * When zoomed in further, the polygons should change from states to counties
 
 The screenshot below shows an example zoom level 
 
