@@ -38,14 +38,14 @@ vector and raster files in data/ directory.
   * Copy and paste the given URL into a browser
   
 4. In the web browser, select StartDate and EndDate
-  Because the sample of raster data is from January 1, 2018 to January 6, 2018 - select a dates in that range. 
+  * Because the sample of raster data is from January 1, 2018 to January 6, 2018 - select a dates in that range. 
   * Example: 
-      StartDate: Select January 1, 2018
-      EndDate: Select today's date
+      * StartDate: Select January 1, 2018
+      * EndDate: Select today's date
 
 5. Zoom into the United States (one zoom at a time) and you should see some state colors change. 
-  * You will see U.S. states 
-  * When zoomed in further, the polygons should change from states to counties
+   * You will see U.S. states 
+   * When zoomed in further, the polygons should change from states to counties
 
 The screenshot below shows an example zoom level 
 
