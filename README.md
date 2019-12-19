@@ -42,9 +42,10 @@ will compute a range of statistics: sum and count (of pixels), and min, max, ave
 #### 4. In the web browser, select StartDate and EndDate
 
   * Because the sample of raster data is from January 1, 2018 to January 6, 2018 - select a dates in that range. 
-  * ![Example:](select_dates.gif) 
+  * Example:
       * StartDate: Select January 1, 2018
       * EndDate: Select today's date
+      ![alt text](select_dates.gif)
       
   
 
