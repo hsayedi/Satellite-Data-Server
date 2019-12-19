@@ -43,7 +43,7 @@ will compute a range of statistics: sum and count (of pixels), and min, max, ave
   * You will see the server running at a given URL, i.e. ```http://localhost:1234```
   * Copy and paste the given URL into a browser
   
-  ![alt_text](npm_start.gif)
+  ![alt_text](img/npm_start.gif)
   
 #### 4. In the web browser, select StartDate and EndDate
 
@@ -52,21 +52,23 @@ will compute a range of statistics: sum and count (of pixels), and min, max, ave
       * StartDate: Select January 1, 2018
       * EndDate: Select today's date
       
-      ![alt text](select_dates.gif)
+      ![alt text](img/select_dates.gif)
       
   
 
 #### 5. Zoom into the United States (one zoom at a time) and you should see some state colors change. 
 
-  * You will see U.S. states 
-  * When zoomed in further, the polygons should change from states to counties
+  * You will initially see U.S. states 
+  * When zoomed in further, the polygons should change from U.S. states to U.S. counties
 
 The screenshot below shows an example zoom level 
 
-![U.S. Counties](counties_zoom.png)
+![alt_text](img/zooms.gif)
 
-Note: Purple polygons inidicates an undefinied region, which is due to the small range of sample data we are using. You will 
-notice a gradience of green to orange states. These shades indicate the aggregate temperatures for each given polygon. 
+##### Note:
+  * Purple polygons inidicates an undefinied region, which is due to the small range of sample data we are using. 
+  * You will notice a gradience of green to orange states. These shades indicate the aggregate temperatures for each given
+  polygon. 
 
 
 
