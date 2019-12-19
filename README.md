@@ -26,7 +26,7 @@ will compute a range of statistics: sum and count (of pixels), and min, max, ave
 
 ##### Note: 
   * The vector data is in the ```data/WGS84_boundaris/``` directory and the raster data is in ```data/raster/``` directory. You may
-  need to change the paths to access these files, specifically in files map_interface/index.js (lines 251/252 and 257/258)
+  need to change the paths to access these files, specifically in files ```map_interface/index.js``` (lines 251/252 and 257/258)
 
 #### 1. Clone this repository into your local machine 
 
