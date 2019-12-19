@@ -5,8 +5,8 @@
 ### Background 
 
 The Satellite-Data-Server hosts satellite data to provide two main functions: 
-1. Processing the data in aggregate using the Scanline method and 
-2. Hosting the data to make available for users through a map interface. 
+1. Processing the data in aggregation using the Scanline method 
+2. Hosting the data to make available for users through a map user interface. 
 
 We execute the zonal statistics operation using the Scanline method. This method processes queries in aggregation, which 
 combines vector and raster data in their raw formats. Read more about the Scanline method [here.](https://www.cs.ucr.edu/~eldawy/publications/19_VLDB_Raptor_Demo.pdf) 
@@ -42,9 +42,11 @@ will compute a range of statistics: sum and count (of pixels), and min, max, ave
 #### 4. In the web browser, select StartDate and EndDate
 
   * Because the sample of raster data is from January 1, 2018 to January 6, 2018 - select a dates in that range. 
-  * Example: 
+  * ![Example:](dates_select.gif) 
       * StartDate: Select January 1, 2018
       * EndDate: Select today's date
+      
+  
 
 #### 5. Zoom into the United States (one zoom at a time) and you should see some state colors change. 
 
